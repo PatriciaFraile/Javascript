@@ -39,8 +39,39 @@ console.log(igual3);
 //alert(`Bienvenido ${nombre}`);
 //let confirmacion = confirm("Seguro que quieres continuar?");
 //console.log(confirmacion);
-let intro = prompt("Introudce un dato a trabajar", "Parametro por trabajar");
-console.log(intro);
+/*let intro = prompt("Introudce un dato a trabajar", "Parametro por trabajar");
+console.log(intro);*/
+
+/*
+ejercicio
+*/
+nombre = "Paula";
+apellido = "Gómez";
+let num1 = prompt(`Introduce un numero`);
+let num2 = prompt (`Introduce un numero`);
+
+let confirmacion = confirm(`${nombre} ${apellido} estas seguro de hacer esta operacion?`);
+if(confirmacion){
+    let sum = Number(num1)+ Number(num2);
+    let rest = num1-num2;
+    let mul = num1*num2;
+    let div = num1/num2;
+    let mod = num1%num2;
+    alert(`Las operaciones entre ${num1} y ${num2} son :
+        suma : ${sum}
+        resta : ${rest}
+        multiplicacion ; ${mul}
+        division : ${div}
+        modulo : ${mod}`);
+}else{
+    alert(`${nombre} hasta la proxima`)
+}
+
+
+
+
+
+
 
 
 
