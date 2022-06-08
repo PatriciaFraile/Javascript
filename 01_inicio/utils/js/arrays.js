@@ -1,6 +1,5 @@
-let elementos =[1,2,4,5,6,7]; //number
-let equipos = ["madrid","barsa","sevilla","atletico","getafe"]; //string
-let cosas = [1,2,3,4,"madrid", false]; //any
+/*let elementos =[1,2,4,5,6,7]; //number
+let cosas = [1,2,3,4,"madrid", false]; //any*/
 /*
 //acceder posicion
 console.log(equipos[0]);
@@ -22,10 +21,36 @@ console.log(equipos);
 //shift quita el primer elemento
 console.log(equipos.shift());
 console.log(equipos);
-*/
+
 //filter ---> filtrar por x posicion
-
-
+//elimina
+let equipos = ["madrid","barsa","sevilla","atletico","getafe"]; //string
+equipos = equipos.filter((item) => {
+    item != "sevilla"
+});
+console.log(equipos);
+*/
+let numeros = [1,2,3,4,5,6,7,8,9,10];
+//mostrar los elementos de un array
+let i = 0;
+/*while(i<numeros.length){
+    console.log(numeros[i]);
+    i++;
+}
+*/
+/*for (let index = 0; index < numeros.length; index++) {
+    console.log(numeros[index]);    
+}
+*/
+/*numeros.forEach(element => {
+    console.log(element);  
+});
+*/
+/*while(i<numeros.length){
+    console.log(numeros[i]+1);
+    i++;
+}
+*/
 
 
 
