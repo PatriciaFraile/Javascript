@@ -29,5 +29,7 @@ mostrarBaraja();
 
 let aleatorio = Number(Math.random()*52);
 
-
-
+function calcularValor (carta) {
+    return carta.substring(0,carta.length-1);   
+}
+console.log(calcularValor(baraja.pop[parseInt(Math.random*53)]));
