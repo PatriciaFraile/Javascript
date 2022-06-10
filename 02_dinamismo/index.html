@@ -19,33 +19,35 @@
               <h2>Resultados</h2>
               <p>
                   Esto es un ejemplo de texto escrito desde el DOM manual de la página
+                  Pulsaciones : <span>0</span>
               </p>
               <h3>Primero</h3>
-              <ul>
-                  <li >Sistemas</li>
-                  <li >Programación</li>
-                  <li >BD</li>
-                  <li>FOL</li>
-                  <li>Lenguaje</li>
+              <ul id="lista_primero">
+                  <li class="list-group-item">Sistemas</li>
+                  <li class="list-group-item" >Programación</li>
+                  <li class="list-group-item">BD</li>
+                  <li class="list-group-item">FOL</li>
+                  <li class="list-group-item">Lenguaje</li>
               </ul>
               <h3>Segundo</h3>
-              <ul class="list-grup">
-                    <li class="list-group-item">Programacion Multimedia</li>
-                    <li class="list-group-item">Programacion Servicios</li>
-                    <li class="list-group-item">Sistemas Gestión</li>
-                    <li class="list-group-item">Desarrollo de Interfaces</li>
-                    <li class="list-group-item">Empresa</li>
-                    <li class="list-group-item">Ingles</li>
-                    <li class="list-group-item">Acceso de Datos</li>
+              <ul>
+                    <li>Programacion Multimedia</li>
+                    <li>Programacion Servicios</li>
+                    <li>Sistemas Gestión</li>
+                    <li>Desarrollo de Interfaces</li>
+                    <li>Empresa</li>
+                    <li>Ingles</li>
+                    <li >Acceso de Datos</li>
                 </ul>
             </div>
             <div class="col-4">
                 <h2>Acciones</h2>
                 <button id = "boton_agregar" class="btn btn-primary">Agregar</button>
+                <input type="text" id="texto_li" class="form-control" placeholder="Introduce">
 
             </div>
         </div>
     </div>
-    <script src="./utils/js/dinamismo_2.js"> </script>
+    <script src="./utils/js/eventos.js"> </script>
 </body>
 </html>
