@@ -22,26 +22,29 @@
             <div class="contact-form">
                 <h4>Enviame un mensaje</h4>
                 <br>
-                <form class="form" action="RECIBIDO.html">
-                    <input type="text" placeholder="Name">
+                <form class="form" action="RECIBIDO.html" id="formulario">
+                    <input type="text" placeholder="Name" id="nombre">
                     <br>
                     <br>
-                    <input type="text" placeholder="Apellidos">
+                    <input type="text" placeholder="Apellidos" id="apellido">
                     <br>
                     <br>
-                    <input type="email" placeholder="Email">
+                    <input type="text" placeholder="Telefono"  maxlength="9" id="telefono">
                     <br>
                     <br>
-                    <input type="text" placeholder="DNI">
+                    <input type="email" placeholder="Email" id="email">
                     <br>
                     <br>
-                    <button type="submit" class="submit">
+                    <input type="text" placeholder="DNI" size="10" maxlength="9" id="dni">
+                    <br>
+                    <br>
+                    <button type="submit" class="submit" id="mensaje">
                         Envía el mensaje
                     </button>
                 </form>
             </div>
         </div>
     </div>
-    <script src="./utils/js/eventos.js"> </script>
+    <script src="./utils/js/ejercicio.js"> </script>
 </body>
 </html>
