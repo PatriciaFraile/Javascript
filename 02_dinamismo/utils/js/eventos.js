@@ -1,40 +1,32 @@
 let boton_agregar = document.querySelector("#boton_agregar");
 let input_agregar = document.querySelector("#texto_li");
-let pulsar = document.querySelector("span");
 let contador = 0;
+let spanPulsaciones = document.querySelector("span");
 
-console.log("1 TIPO");
-
-boton_agregar.addEventListener("click", function () {
-    console.log("Pulsar Elemento");
-    
-});
-console.log("2 TIPO");
-
-boton_agregar.addEventListener("click",  ()=> {
-    console.log("Pulsar Elemento");
-    
-});
-console.log("3 TIPO");
-
-boton_agregar.addEventListener("click", pulsarElemento);
-
-function pulsarElemento() {
-    console.log("Pulsar Elemento");    
-}
-
-
-input_agregar.addEventListener("keydown" ,(event) =>{
-    console.log(event.key);
+boton_agregar.addEventListener("click", (element) => {
+  let contenido = input_agregar.value;
+  // console.log(contenido);
+  // agregar nodos
+  /*let lista = document.querySelector("#lista_primeros");
+  let nodoLI = document.createElement("li");
+  nodoLI.innerText = contenido;
+  //nodoLI.classList.add("list-group-item");
+  nodoLI.setAttribute("class", "list-group-item");
+  nodoLI.setAttribute("id", "valor");
+  lista.appendChild(nodoLI);*/
+  // modificar el html
+  let lista = document.querySelector("#lista_primeros");
+  if(contenido == ""){
+      alert(`Mensaje vacío`)
+  }else{
+  lista.innerHTML = `${lista.innerHTML} <li class='list-group-item'>${contenido}</li>`;
+  }
 });
 
-input_agregar.addEventListener("keyup" , (event) => {
-        contador++;
-        pulsar.innerText = contador;  
+input_agregar.addEventListener("keydown", (event) => {
+  // sacar la tecla pulsada por consola
+  // console.log(event.key);
+  // console.log(input_agregar.value);
+  contador++;
+  spanPulsaciones.innerText = contador;
 });
-
-
-
-//declarar la funcion fuera (va a ser reutilizada)
-// o dentro (solo ejecutada por el evento) --> anónima
-
