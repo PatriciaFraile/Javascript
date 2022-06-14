@@ -6,7 +6,7 @@ boton.addEventListener("click",(element)=>{
     let telefono = document.getElementById("telefono");
     let dni = document.getElementById("dni");
     let email = document.getElementById("email");
-    if(!nombre.value || !apellido.value || !telefono.value || !dni.value || !email.value  ){
+    if(!nombre.value||!apellido.value||!telefono.value||!dni.value||!email.value){
         alert(`Todos los campos son obligatorios`); 
         return false;
     }
