@@ -1,12 +1,16 @@
 let baraja = [];
 let boton = document.querySelector("#mensaje");
+let nombre = document.querySelector("#nombre")
 
 boton.addEventListener("click",(element)=>{
   let nombreUsuario = document.getElementById("nombre");
   if(!nombreUsuario.value){
-    alert(`Es obligatorio el nombre del usuario`);
+    alert("Es obligatorio el nombre del usuario");
+  }else{
+    
   }
-})
+});
+
 
 function iniciarBaraja() {
   let palos = ["T", "C", "D", "P"];
