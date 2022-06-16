@@ -72,21 +72,32 @@ botonPedir.addEventListener("click", () => {
   contadorPuntosJ1 += carta.getValor;
 
   puntosJ1.innerText = contadorPuntosJ1;
-
-  setTimeout(() => {
-    if (contadorPuntosJ1 >= 21) {
+     setTimeout(() => {
+    if (contadorPuntosJ1 == 21) {
       //contadorPuntosJ1 > 21 && alert("has perdido");
       turnoBanca();
+    }else if(contadorPuntosJ1>21){
+      alert("Has perdido");
     }
+    
   }, 500);
 
   // modificar el contador del span del jugador
   // modificar el contador del span de la banca
 });
+botonPlantar.addEventListener("click",()=>{
+  turnoBanca();
+  botonPedir.disabled = false;
+  botonPlantar.disabled = false;
+});
+
 
 function turnoBanca() {
-  console.log("jugando la banca");
-  setInterval(() => {
+  let miFuncion = () => {
+    console.log("jugando la banca");
+  };
+  miFuncion();
+  let intervaloBanca = setInterval(() => {
     let carta = baraja.pop();
     let imagenCarta = document.createElement("img");
     imagenCarta.setAttribute("src", carta.getRuta);
@@ -94,5 +105,30 @@ function turnoBanca() {
     cartasJ2.appendChild(imagenCarta);
     contadorPuntosJ2 += carta.getValor;
     puntosJ2.innerText = contadorPuntosJ2;
+    setTimeout(() => {
+      if (contadorPuntosJ2 >= 17 && contadorPuntosJ2<=21) {
+        clearInterval(intervaloBanca);
+
+        if (contadorPuntosJ1 > contadorPuntosJ2) {
+          alert("Jugador uno ganador");
+        } else if (contadorPuntosJ2 > contadorPuntosJ1) {
+          alert("Jugador dos ganador");
+        } else {
+          alert("Empate");
+        }
+      }else if (contadorPuntosJ2>21){
+        clearInterval(intervaloBanca);
+        alert("Jugador uno ganador");
+      }
+    }, 500);
   }, 1500);
+}
+function pedirCarta(jugador) {
+  let carta = baraja.pop();
+  let imagenCarta = document.createElement("img");
+  imagenCarta.setAttribute("src", carta.getRuta);
+  imagenCarta.className = "carta";
+  cartasJ1.appendChild(imagenCarta);
+  contadorPuntosJ1 += carta.getValor;
+  puntosJ1.innerText = contadorPuntosJ1;
 }
